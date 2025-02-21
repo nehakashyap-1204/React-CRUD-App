@@ -1,0 +1,518 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: unset;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+  color: #fff;
+  background-color: #009688;
+  padding: 0 35px;
+  z-index: 25;
+}
+
+.header i {
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.toggle-container button {
+  border: none;
+  outline: none;
+  padding: 6px;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  text-align: center;
+}
+
+.header button i {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-container {
+  position: relative;
+  display: inline-block;
+}
+
+.toggle-options {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+  padding: 10px;
+  width: 200px;
+  margin-top: 15px;
+  display: none;
+  cursor: pointer;
+}
+
+.toggle-options ul {
+  text-align: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.toggle-options li a {
+  font-weight: 400;
+  text-decoration: none;
+  color: #555;
+  display: block;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: background .2s ease-in-out;
+}
+
+.toggle-options li a:hover {
+  color: #009688;
+  background: #d2f4f1;
+}
+
+.toggle-options.active {
+  display: block;
+}
+
+.divbar {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.home-searchbar {
+  display: flex;
+}
+
+.home-searchbar i {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  font-size: 18px;
+  color: #6c757d;
+}
+
+.home-searchbar input {
+  width: 280px;
+  border: 2px solid #ccc;
+}
+
+.home-searchbar input:focus {
+  border-color: #009688;
+  outline: none;
+  box-shadow: none;
+}
+
+.home-container {
+  margin-top: 80px;
+  margin-left: 270px;
+  width: 700px;
+}
+
+.home-pagination .pagination {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  margin-top: 120px;
+}
+
+.container form input:focus {
+  border-color: #009688;
+  outline: none;
+  box-shadow: none;
+}
+
+/* sidebar */
+.wrapper {
+  height: 100%;
+  width: 330px;
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background: #f4f9f4;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 15;
+}
+
+.list-items {
+  height: 100%;
+  width: 100%;
+  margin-top: 105px;
+  list-style: none;
+  padding-left: 0px;
+}
+
+.list-items li {
+  border-radius: 10px;
+  line-height: 50px;
+  font-size: 20px;
+  padding-left: 20px;
+  transition: all .4s ease;
+  cursor: pointer;
+}
+
+.list-items li a {
+  text-decoration: none;
+  color: #000;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.list-items li a i {
+  margin-right: 10px;
+}
+
+.list-items li:hover {
+  background: #b7e2d2;
+}
+
+#sidebar ul li {
+  padding-left: 20px;
+}
+
+.wrapper .menu-btn {
+  position: fixed;
+  top: 7px;
+  left: 20px;
+  height: 40px;
+  width: 40px;
+  z-index: 20;
+  color: #f2f2f2;
+  background: #009688;
+  border-radius: 7px;
+  text-align: center;
+  font-size: 23px;
+  line-height: 40px;
+  /* cursor: pointer; */
+  transition: left .2s ease;
+  margin-top: 55px
+}
+
+.user-management {
+  margin-top: 200px;
+}
+
+.page-heading {
+  position: absolute;
+  top: 70px;
+  left: 310px;
+}
+
+.tableContainer {
+  height: 100%;
+  width: 100%;
+  margin-top: 100px;
+  position: relative;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 155px;
+  text-align: right;
+}
+
+.search-menu {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 210px;
+  position: relative;
+}
+
+.search-menu i {
+  color: gray;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.search-menu input {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  box-shadow: none;
+  outline: none;
+  border: 2px solid #ccc;
+  transition: border-color 0.3s ease;
+  cursor: auto;
+}
+
+.search-menu input:focus {
+  border-color: #009688;
+  outline: none;
+  box-shadow: none;
+}
+
+.tableContainer table {
+  max-width: 880px;
+  margin: 20px auto 40px;
+  border-collapse: collapse;
+}
+
+.action-btn {
+  border: none;
+  outline: none;
+  color: #fff;
+  margin-right: 7px;
+}
+
+.update-btn {
+  padding: 5px 10px;
+  border-radius: 4px;
+  background: #ffc107;
+}
+
+.update-btn:hover {
+  background: #fece3e;
+}
+
+.delete-btn {
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: #dc3545;
+}
+
+.delete-btn:hover {
+  background-color: #e94152;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  white-space: nowrap;
+  text-align: center;
+}
+
+#sidebar.open {
+  transform: translateX(0%);
+}
+
+#sidebar.close {
+  transform: translateX(-100%);
+}
+
+
+.pagination .page-link {
+  color: #009688;
+  border: none;
+}
+
+.pagination .page-link:hover {
+  color: #fff;
+  background: #009688;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #009688;
+  color: white;
+  outline: none;
+  border: none;
+}
+
+.pagination .page-link.disabled {
+  background-color: #e9ecef;
+  color: #6c757d;
+}
+
+/* Remove blue outline from pagination buttons when focused or active */
+.pagination .page-link:focus,
+.pagination .page-item.active .page-link {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Logout page css */
+.logout {
+  width: 100%;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  margin: 160px 0px;
+  /* align-items: center; */
+}
+
+.logout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border: 1px solid #212121;
+  border-radius: 8px;
+  max-width: 450px;
+}
+
+.logout-buttons {
+  padding: 10px 20px;
+}
+
+.logout-buttons button {
+  padding: 8px 25px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin: 0px 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#cancel-btn {
+  background: #fff;
+  color: #009688;
+  border: 2.5px solid #009688;
+  transition: all .3s;
+}
+
+#logout-btn {
+  background: #019081;
+  color: #fff;
+  border: 2.5px solid #019081;
+  transition: all .3s;
+}
+
+#cancel-btn:hover {
+  background: #009688;
+  color: #fff;
+}
+
+#logout-btn:hover {
+  background: #006159;
+  border-color: #006159;
+  color: #fff;
+}
+
+@media screen and (max-width: 1400px) {
+  .pagination {
+    margin-right: 65px;
+  }
+
+  .search-menu {
+    margin-right: 65px;
+  }
+
+  .search-menu {
+    margin-right: 120px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .home-container {
+    margin-top: 80px;
+    margin-left: 270px;
+    width: 550px;
+  }
+
+  #sidebar.close {
+    transform: translateX(-100%);
+  }
+
+  #sidebar.open {
+    transform: translateX(0%);
+  }
+
+  .page-heading {
+    top: 70px;
+    left: 180px;
+  }
+
+  .pagination {
+    margin-right: -45px;
+  }
+
+  .search-menu {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .home-container {
+    margin-top: 80px;
+    margin-left: 120px;
+    width: 550px;
+  }
+
+  .search-menu {
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    margin: 120px auto 50px;
+    width: 350px;
+  }
+
+  .page-heading {
+    top: 70px;
+    left: 80px;
+  }
+
+  .table th,
+  .table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .action-btn {
+    font-size: 10px;
+  }
+
+  .search-menu {
+    margin: 20px 0px;
+  }
+
+  .search-menu input {
+    max-width: 200px;
+    padding: 5px;
+  }
+
+  .logout-container {
+    padding: 10px;
+    max-width: 350px;
+  }
+
+  .logout-buttons button {
+    padding: 8px ;
+    margin: 0px 5px;
+    font-size: 14px;
+  }
+}
